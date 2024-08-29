@@ -14,12 +14,11 @@
    &__link {
       text-transform: uppercase;
       font-size: 14px;
+      display: inline-block;
 
       @media (max-width: $pc) {
          font-size: calc(12px + 2*((100vw - 320px) / (1260 - 320)));
       }
-
-      display: inline-block;
    }
 
    &__content {

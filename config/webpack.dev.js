@@ -51,9 +51,9 @@ const config = {
 		static: paths.build,
 		open: true,
 		compress: true,
-		port: 8080,
+		port: 'auto',
 		hot: true,
-		host: 'localhost', // localhost
+		host: 'local-ip', // localhost
 		//В режимі розробника папка 
 		// результатом (dist) буде створюватися на диску)
 		//devMiddleware: {
@@ -96,12 +96,14 @@ const config = {
 								},
 							},
 						},
-					}, {
+					},
+					'postcss-loader',
+					{
 						loader: 'sass-loader',
 						options: {
 							sourceMap: true,
 						}
-					}
+					},
 				],
 			}, {
 				test: /\.pug$/,

@@ -5,10 +5,12 @@ import * as path from 'path';
 
 export const otfToTtf = () => {
 	// Створення папки fonts
+	/*
 	const fontsDir = path.resolve(`src/fonts`);
 	if (!fs.existsSync(fontsDir)) {
 		fs.mkdirSync(fontsDir);
 	}
+	*/
 	// Шукаємо файли шрифтів .otf
 	return app.gulp.src(`${app.path.srcFolder}/fonts/*.otf`, { encoding: false })
 		.pipe(app.plugins.plumber(
