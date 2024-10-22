@@ -56,7 +56,7 @@
    &__left-block {
       flex: 0 1 60%;
 
-      @media (max-width:$mobile) {
+      @media (max-width:$tablet) {
          flex: 0 1 50%;
       }
 
@@ -68,7 +68,7 @@
    &__right-block {
       flex: 0 1 40%;
 
-      @media (max-width:$mobile) {
+      @media (max-width:$tablet) {
          flex: 0 1 50%;
       }
 
@@ -78,38 +78,28 @@
    }
 
    &__title {
-      font-size: toRem(80);
-      line-height: 1.1;
       text-align: left;
       opacity: 0;
       transform: translateY(50px);
       text-shadow: 0 0 5px $mainColor;
+   }
+
+   &__title-big {
+      font-size: toRem(80);
+      line-height: 1.1;
 
       @media (max-width: 1500px) {
          font-size: toRem(55);
       }
 
       @media (max-width:$pc) {
-         font-size: calc(toRem(30) + 25*((100vw - 320px) / (1200 - 320)));
+         font-size: calc(toRem(40) + 15*((100vw - 320px) / (1200 - 320)));
       }
    }
 
-   &__title._watcher-view {
-      opacity: 1;
-      transform: translateY(0);
-      transition: transform 1.3s ease 0s, opacity 1.3s ease 0s;
-      /* text-align: center; */
-   }
-
-   &__label {
+   &__title-small {
       font-size: toRem(40);
       font-weight: 900;
-      line-height: math.div(60, 50);
-      margin-bottom: toEm(40, 40);
-      opacity: 0;
-      line-height: 0.9;
-      transform: translateY(50px);
-      text-shadow: 0 0 5px $mainColor;
 
       @media (max-width: 1500px) {
          font-size: toRem(32);
@@ -128,8 +118,26 @@
          margin-bottom: 30px;
       }
 
-		@media (max-width:$mobileSmall) {
+      @media (max-width:$mobileSmall) {
          margin-bottom: 15px;
+      }
+   }
+
+   &__title._watcher-view {
+      opacity: 1;
+      transform: translateY(0);
+      transition: transform 1.3s ease 0s, opacity 1.3s ease 0s;
+   }
+
+   &__label {
+      opacity: 0;
+      line-height: math.div(60, 50);
+      transform: translateY(50px);
+      text-shadow: 0 0 5px $mainColor;
+      margin-bottom: toEm(80, 40);
+
+		@media (max-width:$mobileSmall) {
+         margin-bottom: 25px;
       }
    }
 
